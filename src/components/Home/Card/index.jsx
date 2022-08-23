@@ -23,7 +23,7 @@ const Card = ({ article }) => {
         <div className="flex items-center gap-2">
           <div>
             <img
-              src="/assets/images/avatar-2.jpg"
+              src="/assets/images/avatar-5.jpg"
               width={32}
               height={32}
               className="rounded-full object-cover"
