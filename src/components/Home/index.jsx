@@ -17,11 +17,11 @@ const Home = () => {
   const dataVideos = useSelector((state) => state.videos);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
 
-  useEffect(() => {
-    if (!user) {
-      navigate("/auth");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!user) {
+  //     navigate("/auth");
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (user?.result?.member === "free" || user?.result === undefined) {
@@ -69,6 +69,17 @@ const Home = () => {
           </>
         )}
       </div>
+      <div data-paperturn="embed-v1" style={{
+        width: '100%',
+        height: '480px',
+        maxWidth: '100%',
+      }}
+      >
+        <iframe src="https://www.paperturn-view.com/?pid=Mjg282791&bgcolor=transparent&embed=script&shadow=1&flipSound=1&hardCover=1" width="100%" height="100%" webkitllowfullscreen="true" mozallowfullscreen="true" allowFullScreen style={{
+          border: '0px',
+          display: 'block',
+          backgroundColor: 'transparent',
+        }}></iframe></div><script src="https://www.paperturn-view.com/script/embed?v=1"></script>
     </div>
   );
 };
